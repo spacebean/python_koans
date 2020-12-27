@@ -3,6 +3,7 @@
 
 from runner.koan import *
 
+
 class AboutDeletingObjects(Koan):
     def test_del_can_remove_slices(self):
         lottery_nums = [4, 8, 15, 16, 23, 42]
@@ -69,8 +70,7 @@ class AboutDeletingObjects(Koan):
         def del_name(self):
             del self._name
 
-        name = property(get_name, set_name, del_name, \
-            "Mr Eastwood's current alias")
+        name = property(get_name, set_name, del_name, "Mr Eastwood's current alias")
 
     def test_del_works_with_properties(self):
         cowboy = self.ClintEastwood()
@@ -79,7 +79,6 @@ class AboutDeletingObjects(Koan):
 
         del cowboy.name
         self.assertEqual(__, cowboy.name)
-
 
     # ====================================================================
 

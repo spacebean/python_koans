@@ -3,6 +3,7 @@
 
 from runner.koan import *
 
+
 class AboutInheritance(Koan):
     class Dog:
         def __init__(self, name):

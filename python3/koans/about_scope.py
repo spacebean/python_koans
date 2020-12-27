@@ -6,7 +6,8 @@ from runner.koan import *
 from . import jims
 from . import joes
 
-counter = 0 # Global
+counter = 0  # Global
+
 
 class AboutScope(Koan):
     #
@@ -83,16 +84,20 @@ class AboutScope(Koan):
 
     def local_access(self):
         stuff = 'eels'
+
         def from_the_league():
             stuff = 'this is a local shop for local people'
             return stuff
+
         return from_the_league()
 
     def nonlocal_access(self):
         stuff = 'eels'
+
         def from_the_boosh():
             nonlocal stuff
             return stuff
+
         return from_the_boosh()
 
     def test_getting_something_locally(self):

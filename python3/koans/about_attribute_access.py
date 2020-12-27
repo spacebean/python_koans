@@ -7,8 +7,8 @@
 
 from runner.koan import *
 
-class AboutAttributeAccess(Koan):
 
+class AboutAttributeAccess(Koan):
     class TypicalObject:
         pass
 
@@ -41,7 +41,7 @@ class AboutAttributeAccess(Koan):
     def test_intercepting_return_values_can_disrupt_the_call_chain(self):
         catcher = self.CatchAllAttributeReads()
 
-        self.assertRegex(catcher.foobaz, __) # This is fine
+        self.assertRegex(catcher.foobaz, __)  # This is fine
 
         try:
             catcher.foobaz(1)
@@ -97,7 +97,7 @@ class AboutAttributeAccess(Koan):
             global stack_depth
             stack_depth += 1
 
-            if stack_depth<=10: # to prevent a stack overflow
+            if stack_depth <= 10:  # to prevent a stack overflow
                 self.no_of_getattribute_calls += 1
                 # Oops! We just accessed an attribute (no_of_getattribute_calls)
                 # Guess what happens when self.no_of_getattribute_calls is
@@ -142,16 +142,14 @@ class AboutAttributeAccess(Koan):
         catcher.purple_flamingos()
         catcher.free_pie()
 
-        self.assertEqual(__,
-            type(catcher.give_me_duff_or_give_me_death()).__name__)
-
+        self.assertEqual(__, type(catcher.give_me_duff_or_give_me_death()).__name__)
         self.assertEqual(__, catcher.no_of_getattr_calls)
 
     # ------------------------------------------------------------------
 
     class PossessiveSetter(object):
         def __setattr__(self, attr_name, value):
-            new_attr_name =  attr_name
+            new_attr_name = attr_name
 
             if attr_name[-5:] == 'comic':
                 new_attr_name = "my_" + new_attr_name
@@ -183,7 +181,7 @@ class AboutAttributeAccess(Koan):
             self._num_of_private_coconuts = 2
 
         def __setattr__(self, attr_name, value):
-            new_attr_name =  attr_name
+            new_attr_name = attr_name
 
             if attr_name[0] != '_':
                 new_attr_name = "altered_" + new_attr_name

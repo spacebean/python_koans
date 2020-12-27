@@ -3,15 +3,19 @@
 
 from runner.koan import *
 
+
 def function():
     return "pineapple"
+
 
 def function2():
     return "tractor"
 
+
 class Class:
     def method(self):
         return "parrot"
+
 
 class AboutMethodBindings(Koan):
     def test_methods_are_bound_to_an_object(self):
@@ -87,4 +91,3 @@ class AboutMethodBindings(Koan):
         self.assertEqual(None, self.color.choice)
         self.color = 'purple'
         self.assertEqual(__, self.color.choice)
-

@@ -3,8 +3,8 @@
 
 from runner.koan import *
 
-class AboutControlStatements(Koan):
 
+class AboutControlStatements(Koan):
     def test_if_then_else_statements(self):
         if True:
             result = 'true value'
@@ -74,7 +74,6 @@ class AboutControlStatements(Koan):
         text = __
 
         self.assertRegex(result[2], text)
-
         self.assertNotRegex(result[0], text)
         self.assertNotRegex(result[1], text)
         self.assertNotRegex(result[3], text)

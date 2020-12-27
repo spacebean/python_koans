@@ -5,9 +5,10 @@
 # Based on AboutSandwichCode in the Ruby Koans
 #
 
+import re  # For regular expression string comparisons
+
 from runner.koan import *
 
-import re # For regular expression string comparisons
 
 class AboutWithStatements(Koan):
     def count_lines(self, file_name):

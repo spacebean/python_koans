@@ -7,6 +7,7 @@
 
 from runner.koan import *
 
+
 class AboutClassAttributes(Koan):
     class Dog:
         pass
@@ -40,7 +41,7 @@ class AboutClassAttributes(Koan):
 
     def test_defining_functions_on_individual_objects(self):
         fido = self.Dog()
-        fido.wag = lambda : 'fidos wag'
+        fido.wag = lambda: 'fidos wag'
 
         self.assertEqual(__, fido.wag())
 
@@ -50,6 +51,7 @@ class AboutClassAttributes(Koan):
 
         def wag():
             return 'fidos wag'
+
         fido.wag = wag
 
         with self.assertRaises(___): rover.wag()
