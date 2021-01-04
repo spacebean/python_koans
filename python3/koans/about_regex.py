@@ -55,7 +55,6 @@ class AboutRegex(Koan):
             case sensitive. In python you can use re.IGNORECASE, in
             Javascript you can specify the optional i flag. In Ben's
             book you can see more languages.
-
         """
         string = "Hello, my name is Felix or felix and this koan " + \
                  "is based on Ben's book: Regular Expressions in 10 minutes."
@@ -111,7 +110,6 @@ class AboutRegex(Koan):
             Occasionally, you'll have a list of characters that you don't
             want to match. Character sets can be negated using the ^
             metacharacter.
-
         """
         string = "sales.xlx\n" \
                  + "sales1.xls\n" \

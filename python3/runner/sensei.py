@@ -107,7 +107,6 @@ class Sensei(MockableTestResult):
         test, err = problem
         self.stream.writeln("  {0}{1}{2} has damaged your "
           "karma.".format(Fore.RED, Style.BRIGHT, test._testMethodName))
-
         self.stream.writeln("\n{0}{1}You have not yet reached enlightenment ..." \
             .format(Fore.RESET, Style.NORMAL))
         self.stream.writeln("{0}{1}{2}".format(Fore.RED, \
@@ -263,7 +262,7 @@ class Sensei(MockableTestResult):
         if not self.all_lessons:
             self.all_lessons = glob.glob('{0}/../koans/about*.py'.format(cur_dir))
             self.all_lessons = list(filter(lambda filename:
-                                      "about_extra_credit" not in filename,
-                                      self.all_lessons))
+                                    "about_extra_credit" not in filename,
+                                    self.all_lessons))
 
         return self.all_lessons

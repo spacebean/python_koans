@@ -119,7 +119,6 @@ class TestSensei(unittest.TestCase):
             (AboutMrGumby(),"File 'about_mr_gumby.py', line odd"),
             (AboutMessiahs(),"File 'about_messiahs.py', line 844")
         ]
-
         results = self.sensei.sortFailures("AboutTennis")
         self.assertEqual(3, len(results))
         self.assertEqual(2, results[0][0])
@@ -196,7 +195,6 @@ class TestSensei(unittest.TestCase):
     def test_that_if_there_are_no_failures_say_the_final_zenlike_remark(self):
         self.sensei.failures = None
         words = self.sensei.say_something_zenlike()
-
         m = re.search("Spanish Inquisition", words)
         self.assertTrue(m and m.group(0))
 

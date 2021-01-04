@@ -23,6 +23,7 @@ class AboutComprehension(Koan):
 
     def test_unpacking_tuples_in_list_comprehensions(self):
         list_of_tuples = [(1, 'lumberjack'), (2, 'inquisition'), (4, 'spam')]
+ 
         comprehension = [skit * number for number, skit in list_of_tuples]
 
         self.assertEqual(__, comprehension[0])

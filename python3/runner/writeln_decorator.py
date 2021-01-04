@@ -16,4 +16,3 @@ class WritelnDecorator:
     def writeln(self, arg=None):
         if arg: self.write(arg)
         self.write('\n') # text-mode streams translate to \r\n if needed
-
