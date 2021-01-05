@@ -87,7 +87,7 @@ class Sensei(MockableTestResult):
         self.stream.writeln("")
         self.stream.writeln(self.report_progress())
         if self.failures:
-          self.stream.writeln(self.report_remaining())
+            self.stream.writeln(self.report_remaining())
         self.stream.writeln("")
         self.stream.writeln(self.say_something_zenlike())
 
@@ -106,7 +106,7 @@ class Sensei(MockableTestResult):
         if not problem: return
         test, err = problem
         self.stream.writeln("  {0}{1}{2} has damaged your "
-          "karma.".format(Fore.RED, Style.BRIGHT, test._testMethodName))
+            "karma.".format(Fore.RED, Style.BRIGHT, test._testMethodName))
         self.stream.writeln("\n{0}{1}You have not yet reached enlightenment ..." \
             .format(Fore.RESET, Style.NORMAL))
         self.stream.writeln("{0}{1}{2}".format(Fore.RED, \
@@ -250,9 +250,9 @@ class Sensei(MockableTestResult):
     def total_lessons(self):
         all_lessons = self.filter_all_lessons()
         if all_lessons:
-          return len(all_lessons)
+            return len(all_lessons)
         else:
-          return 0
+            return 0
 
     def total_koans(self):
         return self.tests.countTestCases()
