@@ -149,7 +149,7 @@ class Mock(object):
 
     def assert_called_with(self, *args, **kwargs):
         assert self.call_args == (args, kwargs), 'Expected: {0!s}\nCalled with: {1!s}'.format((args, kwargs),
-                                                                                              self.call_args)
+                                                                                                self.call_args)
 
 
 def _dot_lookup(thing, comp, import_path):
