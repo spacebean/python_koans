@@ -21,7 +21,6 @@ class AboutExceptions(Koan):
             self.fail("Oops")
         except Exception as ex:
             result = 'exception handled'
-
             ex2 = ex
 
         self.assertEqual(__, result)
